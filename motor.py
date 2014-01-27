@@ -46,16 +46,16 @@ def back():
 def stop():
     io.output(enable_pin, False)
  
-while True:
-    cmd = raw_input("Command, f, l, r,b, s")
-    direction = cmd[0]
-    if direction == "f":
-        forward()
-    elif direction == "l": 
-        left()
-    elif direction == "r":
-        right()
-    elif direction == "b":
-        back()
-    else :
-        stop()
+#while True:
+#    cmd = raw_input("Command, f, l, r,b, s")
+#    direction = cmd[0]
+#    if direction == "f":
+#        forward()
+#    elif direction == "l": 
+#        left()
+#    elif direction == "r":
+#        right()
+#    elif direction == "b":
+#        back()
+#    else :
+#        stop()
