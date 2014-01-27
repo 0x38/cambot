@@ -8,12 +8,12 @@ class robostate :
     movetime = time.time()
 
 def stopthread(state):
-#    print moving
+#    print state.moving
     while not state.quit :
         #print "time: ", time.time(), " moved:", movetime
 #	print moving
-        if time.time() > state.movetime + 0.1 :
-#                motor.stop()
+        if time.time() > state.movetime + 0.3 and state.moving :
+                motor.stop()
                 state.moving = False
         time.sleep(0.1)
 
@@ -22,7 +22,6 @@ def move(movecall, state):
     state.movetime = time.time()
     print "moving at ", time.time(), " movetime ", state.movetime
     movecall()
-    time.sleep(0.1)
 #    stopthread()
 
 state = robostate()
@@ -48,7 +47,7 @@ while not state.quit:
 	print "left"
         move(motor.left, state)
     elif key == 'q':
-        quit = True
+        state.quit = True
     else :
    	print "press q to quit"
     time.sleep(0.1)
