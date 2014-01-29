@@ -1,0 +1,1 @@
+nc -l 5001 | mplayer -fps 31 -cache 1024 -
