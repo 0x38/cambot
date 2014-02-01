@@ -1,1 +1,1 @@
-nc -l 5001 | mplayer -fps 31 -cache 1024 -
+nc -l 5001 | mplayer -fps 40   -demuxer h264es -
